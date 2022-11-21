@@ -7,4 +7,4 @@
 
 2. run the image with bind mounts: 
 
-    `docker run -w /usr/src/app -v ./:/usr/src/app <imgTagName> sh -c "npm install && npm run dev"`
+    `docker run -w /usr/src/app -v ${PWD}:/usr/src/app <imgTagName> sh -c "npm install && npm run dev"`
