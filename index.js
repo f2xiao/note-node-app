@@ -4,14 +4,20 @@ import { hideBin } from 'yargs/helpers';
 //console.log(chalk.blue('Hello world!'));
 //console.log(yargs(hideBin(process.argv)));
 //console.log(yargs(hideBin(process.argv)).argv);
-//const argv = yargs(hideBin(process.argv)).argv;
-//console.log(argv)
-let note=[];
-yargs(hideBin(process.argv))
-  .command('add <title> <content>', 'add a note with the title and content', () => {
-   
+const args = yargs(hideBin(process.argv));
+console.log(process.argv)
+console.log(args)
+console.log(args.argv)
+
+// customize version number
+args.version("1.1.0");
+args.showVersion("log");
+let note = [];
+
+  args.command('add <title> <content>', 'add a note with the title and content', () => {
+
   }, (argv) => {
-     note.push({title: argv.title, content:argv.content});
+    note.push({ title: argv.title, content: argv.content });
     console.log(note)
     console.info(argv)
   })
