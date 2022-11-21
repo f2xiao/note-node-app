@@ -11,5 +11,5 @@ RUN npm install
 # Bundle app source
 COPY . .
 EXPOSE 8080
-CMD [ "node", "run", "dev" ]
+CMD [ "npm", "run", "dev" ]
 USER node
