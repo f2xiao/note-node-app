@@ -10,7 +10,7 @@ console.log(args)
 console.log(args.argv)
 
 // customize version number
-args.version("1.1.0");
+args.version("1.5.0");
 args.showVersion("log");
 let note = [];
 
