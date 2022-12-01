@@ -1,25 +1,31 @@
-import chalk from 'chalk';
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-//console.log(chalk.blue('Hello world!'));
-//console.log(yargs(hideBin(process.argv)));
-//console.log(yargs(hideBin(process.argv)).argv);
-const args = yargs(hideBin(process.argv));
-console.log(process.argv)
-console.log(args)
-console.log(args.argv)
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+
+console.log(yargs.argv)
+debugger;
 
 // customize version number
-args.version("1.5.0");
-args.showVersion("log");
-let note = [];
+yargs(hideBin(process.argv)).version('1.0.0');
+yargs(hideBin(process.argv)).showVersion("log");
 
-  args.command('add <title> <content>', 'add a note with the title and content', () => {
 
+yargs(hideBin(process.argv))
+  .usage('Usage: $0 <command> [options]')
+  .command('add <title> <content>', 'Add a note with title and content', {
+  title: {
+      describe: "Note title",
+      demandOption: true,
+      type:'string'
+  },
+  content: {
+    describe: "Note content",
+    demandOption: true,
+    type:'string'
+},
+  
   }, (argv) => {
-    note.push({ title: argv.title, content: argv.content });
-    console.log(note)
-    console.info(argv)
-  })
-  .demandCommand(1)
-  .parse()
+  debugger;
+  console.log(argv);
+  console.log('Adding a new note!')
+})
+.argv

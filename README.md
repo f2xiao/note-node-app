@@ -12,3 +12,14 @@
     or
     
     `docker run --mount type=bind,src=${PWD},dst=/usr/src/app <imgTagName> sh -c "npm install && npm run dev"`
+
+3. debug containerized app with vs code:
+    
+    step 1:
+        `ctrl+shift+p` with command `Docker: Initialize for Docker debugging` to scaffold a launch configuration and tasks, i.e, `launch.json` and `tasks.json`
+
+    step 2:
+        run the image and run the debugger in vscode
+
+
+
