@@ -6,6 +6,6 @@
   },
   "include": ["node_modules"],
   "typeAcquisition": {
-    "include": ["yargs"]
+    "include": ["yargs","jest"]
   }
 }
