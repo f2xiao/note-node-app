@@ -35,7 +35,9 @@ command: node index.js read `<title>`
 command: node index.js list
 
 ## Dev
+
 ### note.js
+
 :::mermaid
 classDiagram
     class notes
@@ -47,6 +49,8 @@ classDiagram
     notes : +readNote()
     notes : +listNotes()
 :::
+
+
 #### add a note
 - load all notes from the `notes.json` file
     
