@@ -1,4 +1,6 @@
 import fs from 'fs'
+
+// TODO notes setter
 const readNote = function (title) {
   // load all notes
   const notes = loadNotes();
@@ -33,6 +35,7 @@ const addNote = function (note) {
   // load the notes 
   const notes = loadNotes();
   // push the new note to the array
+  // TODO `addNote()` check if the note obj already exists in the array
   notes.push(note);
   // overwrite the file with the new array
   saveNotes(notes);
