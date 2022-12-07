@@ -40,19 +40,19 @@ command: node index.js list
 classDiagram
     class notes
     notes : +Array notes
-    notes : +getNotes()
     notes : +loadNotes()
+    notes : +saveNotes()
     notes : +addNote()
     notes : +removeNote()
     notes : +readNote()
     notes : +listNotes()
 :::
-#### add a note
+#### add/remove a note
 - load all notes from the `notes.json` file
     
     loadNotes()
-- push the note obj into the notes array
+- push/remove the note obj into the notes array
     
-- overwrite the `notes.json` file
+- overwrite the `notes.json` file with new array
 
 #### Testing

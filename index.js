@@ -16,26 +16,22 @@ yargs(hideBin(process.argv)).showVersion("log");
 
 yargs(hideBin(process.argv))
   .usage('Usage: $0 <command> [options]')
-  .command('add <title> <content>', 'Add a note with title and content', {
-  title: {
-      describe: "Note title",
-      demandOption: true,
-      type:'string'
-  },
-  content: {
-    describe: "Note content",
-    demandOption: true,
-    type:'string'
-},
-  
-  }, (argv) => {
-  debugger;
+  .command('add <title> <content>', 'Add a note with title and content',() => { }, (argv) => {
     // console.log(argv);
     const { title, content } = argv;
     const note = { title, content };
     // console.log(note);
-    // create a file called notes and write the note into the file
     notes.addNote(note)
-})
+  })
+  .command('remove <title>', 'Remove a note with title', {}, (argv) => { 
+    // 
+    notes.removeNote(argv.title);
+  })
+  .command('read <title>', 'Read a note with title', {}, (argv) => { 
+    debugger;
+    // 
+    console.log(argv.title);
+    console.log(notes.readNote(argv.title));
+   })
   .argv
 
