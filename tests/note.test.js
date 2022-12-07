@@ -57,3 +57,4 @@ test('addNote should return a number',() => {
 test('readNote should return a string',() => {
   expect(notes.readNote('shopping list')).toEqual('milk, eggs');
 })
+

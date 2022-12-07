@@ -30,8 +30,12 @@ yargs(hideBin(process.argv))
   .command('read <title>', 'Read a note with title', {}, (argv) => { 
     debugger;
     // 
-    console.log(argv.title);
     console.log(notes.readNote(argv.title));
+  })
+  .command('list', 'List all notes', {}, () => { 
+    debugger;
+    // 
+    console.log(notes.loadNotes());
    })
   .argv
 

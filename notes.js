@@ -50,7 +50,6 @@ const removeNote = function (title) {
   return notes.length;
 }
 
-
 export {
   loadNotes,
   saveNotes,

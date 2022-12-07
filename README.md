@@ -47,7 +47,6 @@ classDiagram
     notes : +addNote()
     notes : +removeNote()
     notes : +readNote()
-    notes : +listNotes()
 :::
 #### add/remove a note
 
@@ -55,6 +54,7 @@ classDiagram
     
     loadNotes()
 - push/remove the note obj into the notes array
+TODO `addNote()` check if the note obj already exists in the array
     
 - overwrite the `notes.json` file with new array
 
